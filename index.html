@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booklist</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/lumen/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9a5da676b3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading text-center">
+        <h1 class="display-2">
+          <i class="fa-solid fa-book-open text-primary"></i>
+          My<span class="text-primary">Book</span>List
+        </h1>
+      </div>
+      <form>
+        <div class="title-container">
+          <h6 class="col-form-label mt-4" for="input-title">Book Title</h6>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Name of Book"
+            id="input-title"
+          />
+        </div>
+        <div class="author-container">
+          <h6 class="col-form-label mt-4 font-weight-bold" for="input-author">
+            Author
+          </h6>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Name of Author"
+            id="input-author"
+          />
+        </div>
+        <div class="importance-container">
+          <h6
+            class="col-form-label mt-4 font-weight-bold"
+            for="input-importance"
+          >
+            Importance
+          </h6>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Valid ranking from 1-10"
+            id="input-importance"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary mt-4 mtb-4"
+          id="submit-btn"
+        >
+          Add Book
+        </button>
+      </form>
+      <table class="table table-striped mt-5">
+        <thead>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Importance (out of 10)</th>
+        </thead>
+
+        <tbody class="book-list">
+          newRow.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.importance}</td>
+          <td class="delete">
+            <button
+              class="btn btn-danger btn-sm delete rounded-circle"
+              id="delete-btn"
+            ></button>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <script defer src="./script.js"></script>
+  </body>
+</html>
